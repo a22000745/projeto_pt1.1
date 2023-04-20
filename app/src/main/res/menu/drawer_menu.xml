@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/form"
+            android:icon="@drawable/icon_registo"
+            android:title="@string/titulo_registo"/>
+        <item
+            android:id="@+id/list"
+            android:icon="@drawable/icon_lista"
+            android:title="@string/titulo_lista"/>
+        <item
+            android:id="@+id/mapa"
+            android:icon="@drawable/icon_map"
+            android:title="@string/titulo_lista"/>
+    </group>
+
+</menu>

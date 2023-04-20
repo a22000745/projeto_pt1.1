@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">App</string>
+    <string name="titulo_registo">Registo</string>
+    <string name="titulo_detalhes">Detalhes</string>
+    <string name="titulo_lista">Lista de Filmes</string>
+    <string name="hint_nome">Batman</string>
+    <string name="hint_cinema">Colombo</string>
+    <string name="hint_data">10/02/2023</string>
+    <string name="hint_observacoes">Não gostei do filme!</string>
+    <string name="form_nome">Insira o nome do filme</string>
+    <string name="form_cinema">Insira o nome do cinema</string>
+    <string name="form_avaliacao">Avaliação (1 a 10)</string>
+    <string name="form_data">Insira a data que viu (dd–mm–aaaa)</string>
+    <string name="form_observacoes">Observações</string>
+    <string name="submeter">Submeter</string>
+    <string name="drawer_open">Aberto</string>
+    <string name="drawer_close">Fechado</string>
+    <string name="hello_blank_fragment">hello</string>
+    <string name="worning_data_formato">A data tem que ser no formato (dd-mm-aaaa)!</string>
+    <string name="worning_data_errada">A data tem que ser no passado!</string>
+    <string name="worning_avaliacao_formato">A avaliação tem que ser numeral!</string>
+    <string name="worning_avaliacao_errada">A avaliação tem que ser entre 1 e 10</string>
+    <string name="worning_campos_vazios">Os campos têm que estar preenchidos!</string>
+    <string name="form_sucesso">O filme ficou registado!</string>
+    <string name="d_editar">Editar</string>
+    <string name="d_eliminar">Eliminar</string>
+</resources>
