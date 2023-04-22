@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mapa"
     tools:context=".MapFragment">
 
@@ -13,6 +14,20 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/im_map_background"/>
+        android:background="@drawable/image_map_background"/>
+    <TextView
+        android:id="@+id/voice_button"
+        android:elevation="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/voz_button"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/Procurar"
+        android:textColor="#ffff"
+        app:drawableStartCompat="@drawable/icon_voz"
+        android:focusable="true" />
 
 </FrameLayout>

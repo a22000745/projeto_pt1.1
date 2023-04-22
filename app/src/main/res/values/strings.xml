@@ -1,9 +1,18 @@
 <resources>
-    <string name="app_name">App</string>
+    <string name="app_name">MyMovies</string>
     <string name="titulo_registo">Registo</string>
     <string name="titulo_detalhes">Detalhes</string>
+    <string name="titulo_inicio">Inicio</string>
+    <string name="b_voz">Procurar por Voz</string>
     <string name="titulo_lista">Lista de Filmes</string>
+    <string name="titulo_mapa">Mapa cinemas</string>
     <string name="hint_nome">Batman</string>
+    <string name="Procurar">Procurar</string>
+    <string name="vi_em">Vi em:</string>
+    <string name="de0a10">De 0 a 10 dei:</string>
+    <string name="filme">Filme:</string>
+    <string name="observacoes">Observações:</string>
+    <string name="foi_na_data">Foi na data:</string>
     <string name="hint_cinema">Colombo</string>
     <string name="hint_data">10/02/2023</string>
     <string name="hint_observacoes">Não gostei do filme!</string>
@@ -16,12 +25,18 @@
     <string name="drawer_open">Aberto</string>
     <string name="drawer_close">Fechado</string>
     <string name="hello_blank_fragment">hello</string>
+    <string name="fala">Diz o nome da página!</string>
+    <string name="voz_timer">Tem dez segundos para falar!</string>
+    <string name="worning_voz">A procura por voz não está disponivel!</string>
     <string name="worning_data_formato">A data tem que ser no formato (dd-mm-aaaa)!</string>
     <string name="worning_data_errada">A data tem que ser no passado!</string>
     <string name="worning_avaliacao_formato">A avaliação tem que ser numeral!</string>
-    <string name="worning_avaliacao_errada">A avaliação tem que ser entre 1 e 10</string>
+    <string name="worning_avaliacao_errada">A avaliação tem que ser entre 1 e 10!</string>
     <string name="worning_campos_vazios">Os campos têm que estar preenchidos!</string>
+    <string name="worning_filme_errado">O filme dado não existe!</string>
+    <string name="worning_observacoes">As observações só podem ter 200 caracteres!</string>
     <string name="form_sucesso">O filme ficou registado!</string>
     <string name="d_editar">Editar</string>
     <string name="d_eliminar">Eliminar</string>
+    <string name="nome_app">My Movies</string>
 </resources>

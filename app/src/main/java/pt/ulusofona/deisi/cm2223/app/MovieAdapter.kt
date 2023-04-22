@@ -21,7 +21,7 @@ class MovieAdapter (private val onMovieClick: (Int) -> Unit,private var items: L
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         holder.itemView.setOnClickListener{onMovieClick(position) }
         holder.binding.lFilme.text = items[position].nome
-        holder.binding.lCinema.text = items[position].cinema
+        holder.binding.lCinema.text = "${items[position].cinema }"
         holder.binding.lAvaliacao.text = items[position].avaliacao.toString()
     }
     override fun getItemCount() = items.size

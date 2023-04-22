@@ -2,10 +2,33 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="@string/titulo_inicio" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/voice_button"
+        android:elevation="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/voz_button"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/Procurar"
+        android:textColor="#ffff"
+        app:drawableStartCompat="@drawable/icon_voz"
+        android:focusable="true" />
 
 </FrameLayout>

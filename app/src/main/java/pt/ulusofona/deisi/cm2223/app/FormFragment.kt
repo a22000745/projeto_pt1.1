@@ -2,6 +2,7 @@ package pt.ulusofona.deisi.cm2223.app
 
 import android.content.Context
 import android.os.Bundle
+import android.text.SpannableStringBuilder
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +11,9 @@ import android.widget.EditText
 import android.widget.Toast
 import pt.ulusofona.deisi.cm2223.app.databinding.FragmentFormBinding
 
-class FormFragment : Fragment() {
+class FormFragment(arrayPosition : Int = -1) : Fragment() {
+    private val position = arrayPosition
+    //constructor(arrayPosition : Int = 1) : this()
     private lateinit var binding: FragmentFormBinding
 
     override fun onCreateView(
@@ -21,6 +24,13 @@ class FormFragment : Fragment() {
             R.layout.fragment_form, container, false
         )
         binding = FragmentFormBinding.bind(view)
+        if(position !=-1){//no caso de estar a editar um filme
+            binding.fNome.text = SpannableStringBuilder(Movies.movieList[position].nome)
+            binding.fCinema.text = SpannableStringBuilder(Movies.movieList[position].cinema)
+            binding.fAvaliacao.text = SpannableStringBuilder(Movies.movieList[position].avaliacao.toString())
+            binding.fData.text = SpannableStringBuilder(Movies.movieList[position].getData())
+            binding.fObservacoes.text = SpannableStringBuilder(Movies.movieList[position].observacoes)
+        }
         val nome = view?.findViewById<EditText>(R.id.f_nome)
         val cinema = view?.findViewById<EditText>(R.id.f_cinema)
         val avaliacao = view?.findViewById<EditText>(R.id.f_avaliacao)
@@ -28,8 +38,11 @@ class FormFragment : Fragment() {
         val observacoes = view?.findViewById<EditText>(R.id.f_observacoes)
         var result = false
         binding.fSubmit.setOnClickListener {
-            val resultado = Movies.checkForm(this, nome?.text.toString(), cinema?.text.toString(), avaliacao?.text.toString(), data?.text.toString())
+            val resultado = Movies.checkForm(this, nome?.text.toString(), cinema?.text.toString(), avaliacao?.text.toString(), data?.text.toString(),observacoes?.text.toString())
             if (resultado == getString(R.string.form_sucesso)) {
+                if(position != -1){
+                    Movies.removeMovie(position)
+                }
                 result = Movies.addMovieForm(nome?.text.toString(), cinema?.text.toString(), avaliacao?.text.toString(), data?.text.toString(), observacoes?.text.toString())
                 val size = Movies.movieList.size
             }

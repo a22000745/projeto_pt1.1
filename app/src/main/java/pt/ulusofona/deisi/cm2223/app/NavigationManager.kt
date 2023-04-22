@@ -10,13 +10,27 @@ object NavigationManager {
         transition.addToBackStack(null)
         transition.commit()
     }
-    fun goToFormFragment(fm: FragmentManager){
-        placeFragment(fm, FormFragment())
+    fun goToBeginningFragment(fm: FragmentManager){
+        placeFragment(fm,DashBoardFragment())
+    }
+    fun goToFormFragment(fm: FragmentManager,arrayPosition: Int = -1){
+        if(arrayPosition == -1){
+            placeFragment(fm, FormFragment())
+        }else{
+            placeFragment(fm, FormFragment(arrayPosition))
+        }
     }
     fun goToListFragment(fm: FragmentManager){
         placeFragment(fm, ListFragment())
     }
     fun goToMapFragment(fm: FragmentManager){
         placeFragment(fm, MapFragment())
+    }
+    fun showDialog(fm: FragmentManager){
+        val dialogFragment = DialogFragment()
+        dialogFragment.show(fm, "my_dialog")
+    }
+    fun goToDetailsFragment(fm: FragmentManager,position : Int){
+        placeFragment(fm, DetailsFragment(position))
     }
 }

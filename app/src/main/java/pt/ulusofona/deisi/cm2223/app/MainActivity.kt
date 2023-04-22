@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClickNavigationItem(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.dashBoard->
+                NavigationManager.goToBeginningFragment(
+                    supportFragmentManager
+                )
             R.id.form ->
                 NavigationManager.goToFormFragment(
                     supportFragmentManager
@@ -54,6 +58,10 @@ class MainActivity : AppCompatActivity() {
                 )
             R.id.mapa ->
                 NavigationManager.goToMapFragment(
+                    supportFragmentManager
+                )
+            R.id.dialog ->
+                NavigationManager.showDialog(
                     supportFragmentManager
                 )
         }

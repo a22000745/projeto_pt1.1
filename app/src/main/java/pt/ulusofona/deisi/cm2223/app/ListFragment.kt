@@ -36,10 +36,12 @@ class ListFragment : Fragment() {
     }
 
     private fun onOperationClick(position:Int) {
-        val transaction = childFragmentManager.beginTransaction()
+       /* val dialogFragment = DialogFragment()
+        dialogFragment.show(childFragmentManager, "my_dialog")*/
+        NavigationManager.goToDetailsFragment(parentFragmentManager,position)
+        /*val transaction = parentFragmentManager.beginTransaction()
         transaction.replace(R.id.list, DetailsFragment(position))
         transaction.addToBackStack(null)
-        transaction.commit()
+        transaction.commit()*/
     }
-
 }

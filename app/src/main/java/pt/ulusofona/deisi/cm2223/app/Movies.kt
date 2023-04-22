@@ -1,6 +1,5 @@
 package pt.ulusofona.deisi.cm2223.app
 
-import android.widget.Button
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -60,16 +59,66 @@ object Movies {
         }
         return ""
     }
-    fun checkForm(context: FormFragment, filme: String, cinema: String, avaliacao: String, date: String): String{
+    fun checkForm(context: FormFragment, filme: String, cinema: String, avaliacao: String, date: String, observacoes: String): String{
         var devolve = ""
         if(filme == "" || cinema == "" || date == "" || avaliacao == ""){
             return context.getString(R.string.worning_campos_vazios)
         }
         devolve += checkAvaliacao(avaliacao,context)
         devolve += checkDate(date,context)
+        devolve += checkMovie(filme,context)
+        devolve += checkObservations(observacoes,context)
         if(devolve.isEmpty()){
             return context.getString(R.string.form_sucesso)
         }
         return devolve
+    }
+    fun checkMovie(movie: String,context:FormFragment):String{
+        return if(getMovieDataBase().contains(movie.lowercase())){
+            ""
+        }else{
+            "${context.getString(R.string.worning_filme_errado)}\n"
+        }
+    }
+    fun checkObservations(observation : String,context:FormFragment):String{
+        return if(observation.length > 200){
+             "${context.getString(R.string.worning_observacoes)}\n"
+        }else{
+            ""
+        }
+    }
+    fun getMovieDataBase(): List<String> {
+        return mutableListOf(
+            "the godfather",
+            "the shawshank redemption",
+            "the dark knight",
+            "the lord of the rings: the fellowship of the ring",
+            "star wars: episode iv - a new hope",
+            "titanic",
+            "jurassic park",
+            "forrest gump",
+            "the silence of the lambs",
+            "the matrix",
+            "the lion king",
+            "pulp fiction",
+            "e.t. the extra-terrestrial",
+            "schindler's list",
+            "gone with the wind",
+            "jaws",
+            "raiders of the lost ark",
+            "the terminator",
+            "rocky",
+            "back to the future",
+            "the wizard of oz",
+            "the sound of music",
+            "singin' in the rain",
+            "psycho",
+            "goodfellas",
+            "fight club",
+            "the graduate",
+            "clockwork orange",
+            "apocalypse now",
+            "blade runner"
+        )
     }
 }
