@@ -1,33 +1,32 @@
 package pt.ulusofona.deisi.cm2223.app
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.Fragment
 import pt.ulusofona.deisi.cm2223.app.databinding.FragmentDetailsBinding
-import pt.ulusofona.deisi.cm2223.app.databinding.FragmentFormBinding
 
-class DetailsFragment(val arrayPosition: Int) : Fragment() {
+class DetailsFragment(private val arrayPosition: Int) : Fragment() {
     private lateinit var binding: FragmentDetailsBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view = inflater.inflate(
-            R.layout.fragment_details , container, false
+            R.layout.fragment_details, container, false
         )
         binding = FragmentDetailsBinding.bind(view)
         binding.dEdit.setOnClickListener {
-            View.OnClickListener(){
-                NavigationManager.goToFormFragment(parentFragmentManager,arrayPosition)
-            }
+            NavigationManager.goToFormFragment(parentFragmentManager, arrayPosition)
         }
-        binding.dErase.setOnClickListener{
+        binding.dErase.setOnClickListener {
             Movies.removeMovie(arrayPosition)
             NavigationManager.goToListFragment(parentFragmentManager)
+        }
+        binding.voiceButton.setOnClickListener {
+            val dialogFragment = DialogFragment()
+            dialogFragment.show(parentFragmentManager, "dialog")
         }
         binding.dFilme.text = Movies.movieList[arrayPosition].nome
         binding.dCinema.text = Movies.movieList[arrayPosition].cinema

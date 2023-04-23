@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:layout_weight="1"
             android:padding="10dp"
             android:text="@string/titulo_detalhes"
@@ -34,11 +35,11 @@
             android:weightSum="2">
 
             <TextView
-                android:id="@+id/d_filme"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="2dp"
+                android:gravity="center"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
@@ -48,12 +49,14 @@
                 android:shadowRadius="20"
                 android:text="@string/filme"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/d_filme"
                 android:layout_weight="1"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
@@ -62,7 +65,7 @@
                 android:shadowDy="1"
                 android:shadowRadius="20"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -76,10 +79,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="2dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
+                android:gravity="center"
                 android:paddingTop="10dp"
                 android:shadowColor="@color/greyis"
                 android:shadowDx="1"
@@ -87,15 +91,16 @@
                 android:shadowRadius="20"
                 android:text="@string/vi_em"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/d_cinema"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="2dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
                 android:paddingTop="10dp"
@@ -104,7 +109,7 @@
                 android:shadowDy="1"
                 android:shadowRadius="20"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -118,18 +123,19 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="2dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
                 android:paddingTop="10dp"
+                android:gravity="center"
                 android:shadowColor="@color/greyis"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="20"
                 android:text="@string/de0a10"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/d_avaliacao"
@@ -137,6 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
                 android:paddingTop="10dp"
@@ -145,7 +152,7 @@
                 android:shadowDy="1"
                 android:shadowRadius="20"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -159,35 +166,37 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="2dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
                 android:paddingTop="10dp"
+                android:gravity="center"
                 android:shadowColor="@color/greyis"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="20"
                 android:text="@string/foi_na_data"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/d_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="2dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
                 android:paddingTop="10dp"
+                android:gravity="center"
                 android:shadowColor="@color/greyis"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="20"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -201,35 +210,37 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="2dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
                 android:paddingTop="10dp"
                 android:shadowColor="@color/greyis"
                 android:shadowDx="1"
+                android:gravity="center"
                 android:shadowDy="1"
                 android:shadowRadius="20"
                 android:text="@string/observacoes"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/d_observacoes"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="2dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/d_info"
                 android:padding="10dp"
                 android:paddingTop="10dp"
+                android:gravity="center"
                 android:shadowColor="@color/greyis"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="20"
                 android:textColor="#000"
-                android:textSize="30sp" />
+                android:textSize="15sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -247,6 +258,7 @@
                 android:background="@drawable/d_buttons"
                 android:clickable="true"
                 android:focusable="true"
+                android:layout_margin="10dp"
                 android:padding="10dp"
                 android:paddingTop="10dp"
                 android:shadowColor="@color/greyis"
@@ -267,6 +279,10 @@
                 android:background="@drawable/d_buttons"
                 android:clickable="true"
                 android:focusable="true"
+                android:paddingRight="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="2dp"
+                android:layout_margin="10dp"
                 android:padding="10dp"
                 android:paddingTop="10dp"
                 android:shadowColor="@color/greyis"

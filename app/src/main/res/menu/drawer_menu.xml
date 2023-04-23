@@ -17,10 +17,6 @@
             android:id="@+id/mapa"
             android:icon="@drawable/icon_map"
             android:title="@string/titulo_mapa"/>
-        <item
-            android:id="@+id/voz"
-            android:icon="@drawable/icon_voz"
-            android:title="@string/b_voz"/>
     </group>
 
 </menu>

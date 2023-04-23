@@ -26,10 +26,26 @@ class DashBoardFragment : Fragment() {
            R.layout.fragment_dash_board, container, false
        )
        binding = FragmentDashBoardBinding.bind(view)
+       binding.filmesMedia.text = Movies.getAvaliacaoMedia().toString()
+       binding.filmesMes.text = Movies.nFilmesMes().toString()
+       binding.nEstreias.text = Notifications.notificationList.size.toString()
+       binding.addNot.setOnClickListener {
+           val dialogFragment = AddNotFragment()
+           dialogFragment.show(parentFragmentManager, "dialog")
+       }
+       binding.seeNot.setOnClickListener {
+           val dialogFragment = NotificationsFragment()
+           dialogFragment.show(parentFragmentManager, "dialog")
+       }
        binding.voiceButton.setOnClickListener {
            val dialogFragment = DialogFragment()
-           dialogFragment.show(parentFragmentManager, "my_dialog")
+           dialogFragment.show(parentFragmentManager, "dialog")
        }
        return  binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        binding.nEstreias.text = Notifications.notificationList.size.toString()
     }
 }

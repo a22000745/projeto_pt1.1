@@ -13,7 +13,6 @@ import pt.ulusofona.deisi.cm2223.app.databinding.FragmentFormBinding
 
 class FormFragment(arrayPosition : Int = -1) : Fragment() {
     private val position = arrayPosition
-    //constructor(arrayPosition : Int = 1) : this()
     private lateinit var binding: FragmentFormBinding
 
     override fun onCreateView(
@@ -37,6 +36,10 @@ class FormFragment(arrayPosition : Int = -1) : Fragment() {
         val data = view?.findViewById<EditText>(R.id.f_data)
         val observacoes = view?.findViewById<EditText>(R.id.f_observacoes)
         var result = false
+        binding.voiceButton.setOnClickListener {
+            val dialogFragment = DialogFragment()
+            dialogFragment.show(parentFragmentManager, "dialog")
+        }
         binding.fSubmit.setOnClickListener {
             val resultado = Movies.checkForm(this, nome?.text.toString(), cinema?.text.toString(), avaliacao?.text.toString(), data?.text.toString(),observacoes?.text.toString())
             if (resultado == getString(R.string.form_sucesso)) {
@@ -44,7 +47,6 @@ class FormFragment(arrayPosition : Int = -1) : Fragment() {
                     Movies.removeMovie(position)
                 }
                 result = Movies.addMovieForm(nome?.text.toString(), cinema?.text.toString(), avaliacao?.text.toString(), data?.text.toString(), observacoes?.text.toString())
-                val size = Movies.movieList.size
             }
             this.context?.let { it -> showToast(it, resultado) }
         }

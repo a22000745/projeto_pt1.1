@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,7 +19,7 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"
-            android:layout_margin="25dp"
+            android:layout_margin="20dp"
             />
         <EditText
             android:layout_width="match_parent"
@@ -71,30 +71,43 @@
             android:textColor="@color/black"
             android:layout_margin="10dp"
             android:padding="20dp"/>
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:id="@+id/f_submit"
-            style="@android:style/Widget.Button"
-            android:layout_marginTop="20dp"
-            android:text="@string/submeter"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:textColor="@color/white"
-            />
-        <TextView
-            android:id="@+id/voice_button"
-            android:elevation="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:background="@drawable/voz_button"
-            android:layout_gravity="bottom|end"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="@string/Procurar"
-            android:textColor="#ffff"
-            app:drawableStartCompat="@drawable/icon_voz"
-            android:focusable="true" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:id="@+id/f_submit"
+                android:layout_weight="2"
+                style="@android:style/Widget.Button"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/submeter"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+    <TextView
+        android:id="@+id/voice_button"
+        android:elevation="5dp"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:background="@drawable/voz_button"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:paddingRight="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="2dp"
+        android:layout_gravity="bottom|right"
+        android:gravity="center"
+        android:text="@string/Procurar"
+        android:textColor="#ffff"
+        app:drawableStartCompat="@drawable/icon_voz"
+        android:focusable="true" />
+</FrameLayout>

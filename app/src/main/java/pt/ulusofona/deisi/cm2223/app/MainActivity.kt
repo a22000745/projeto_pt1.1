@@ -14,13 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        if (!screenRotated(savedInstanceState)) {
-            NavigationManager.goToFormFragment(supportFragmentManager)
-        }
-    }
-
-    private fun screenRotated(savedInstanceState: Bundle?): Boolean {
-        return savedInstanceState != null
+        NavigationManager.goToBeginningFragment(supportFragmentManager)
     }
 
     override fun onStart() {

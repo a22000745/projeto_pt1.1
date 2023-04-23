@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/addNot"
+    android:minWidth="400dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".AddNotFragment">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/n_nome"
+        android:hint="@string/form_nome"
+        android:textColorHint="@color/black"
+        android:background="@color/greyis"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/n_data"
+        android:hint="@string/data_vai_ser"
+        android:textColorHint="@color/black"
+        android:background="@color/greyis"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/n_submit"
+        style="@android:style/Widget.Button"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/submeter"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        />
+
+
+</LinearLayout>

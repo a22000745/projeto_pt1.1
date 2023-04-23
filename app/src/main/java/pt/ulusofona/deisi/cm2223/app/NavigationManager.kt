@@ -14,7 +14,7 @@ object NavigationManager {
         placeFragment(fm,DashBoardFragment())
     }
     fun goToFormFragment(fm: FragmentManager,arrayPosition: Int = -1){
-        if(arrayPosition == -1){
+         if(arrayPosition == -1){
             placeFragment(fm, FormFragment())
         }else{
             placeFragment(fm, FormFragment(arrayPosition))
