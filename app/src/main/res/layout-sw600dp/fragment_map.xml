@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mapa"
+    tools:context=".MapFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/image_map_background" />
+    <TextView
+        android:id="@+id/voice_button"
+        android:elevation="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/voz_button"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingRight="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/Procurar"
+        android:textColor="#ffff"
+        app:drawableStartCompat="@drawable/icon_voz"
+        android:focusable="true" />
+
+</FrameLayout>

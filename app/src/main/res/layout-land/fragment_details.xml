@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="9">
+
+        <TextView
+            android:id="@+id/d_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/titulo_detalhes"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_info"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:text="@string/filme"
+                android:textColor="#000"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/d_filme"
+                android:layout_weight="1"
+                android:background="@drawable/d_info"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:textColor="#000"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_info"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:text="@string/vi_em"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/d_cinema"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/d_info"
+                android:paddingTop="10dp"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:textColor="#000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_info"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:text="@string/de0a10"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/d_avaliacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/d_info"
+                android:paddingTop="10dp"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:textColor="#000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_info"
+                android:gravity="center"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:text="@string/foi_na_data"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/d_data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_info"
+                android:gravity="center"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:textColor="#000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_info"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:gravity="center"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:text="@string/observacoes"
+                android:textColor="#000"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/d_observacoes"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_info"
+                android:gravity="center"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:textColor="#000"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/d_edit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_buttons"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:text="@string/d_editar"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/icon_edit" />
+
+            <TextView
+                android:id="@+id/d_erase"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/d_buttons"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingRight="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="2dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:shadowColor="@color/greyis"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:text="@string/d_eliminar"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/icon_x" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/voice_button"
+        android:elevation="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/voz_button"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/Procurar"
+        android:textColor="#ffff"
+        app:drawableStartCompat="@drawable/icon_voz"
+        android:focusable="true" />
+</FrameLayout>

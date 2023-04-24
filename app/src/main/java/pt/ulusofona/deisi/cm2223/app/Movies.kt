@@ -159,14 +159,16 @@ object Movies {
             "back to the future",
             "the wizard of oz",
             "the sound of music",
-            "singin' in the rain",
+            "singin in the rain",
             "psycho",
             "goodfellas",
             "fight club",
             "the graduate",
             "clockwork orange",
             "apocalypse now",
-            "blade runner"
+            "blade runner",
+            "avatar",
+            "batman"
         )
     }
 }

@@ -6,7 +6,14 @@ object Notifications {
     private val _notificationList = mutableListOf<Notification>(
         Notification("Super Homem", Movies.dateToCalendar("26-04-2023"))
     )
-    val notificationList get() = _notificationList.toList()
+    fun getNotificationList() : List<Notification>{
+        for(notification in _notificationList){
+            if (notification.dataEstreia.before(Calendar.getInstance())){
+                removeNotification(notification)
+            }
+        }
+        return _notificationList.toList()
+    }
     fun addNotification(movie: String,date : String){
         _notificationList.add(Notification(movie,Movies.dateToCalendar(date)))
     }

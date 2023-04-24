@@ -25,7 +25,7 @@ class NotificationsFragment :androidx.fragment.app.DialogFragment()  {
 
     override fun onStart() {
         super.onStart()
-        val list = Notifications.notificationList
+        val list = Notifications.getNotificationList()
         adapter.updateItems(list)
         binding.notifications.layoutManager = LinearLayoutManager(requireContext())
         binding.notifications.adapter = adapter
